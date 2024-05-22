@@ -16,20 +16,20 @@
 ![飲食店詳細ページ](img/shop_detail.png)
 - 予約完了ページ
 ![予約完了ページ](img/done.png)
-- ログイン前メニューページ
+- ログイン前メニュー
 ![menu2](img/menu2.png)
-- ログイン後メニューページ
+- ログイン後メニュー
 ![menu1](img/menu1.png)
 
 ## 目的・目標
 - 目的：外部の飲食店予約サービスは手数料を取られるので自社で予約サービスを持ちたい
 - 目標：初年度でのユーザー数10,000人達成
 
-##　　アプリケーションURL
+## アプリケーションURL
 - 開発環境：http://localhost/
 - phpMyAdmin: Http://localhost:8080/
 
-##　機能一覧
+## 機能一覧
 認証機能
 - ユーザー登録
 - ログイン・ログアウト機能
@@ -64,11 +64,17 @@ Dockerビルド
 1.git clone git
 
 2.docker-compose up -d --build
+
 Laravel環境構築
 
 1.docker-compose exec php bash
+
 2.composer install
+
 3..env.exampleファイルから.envを作成し、環境変数を変更してください
+
 4.php artisan key:generate
+
 5.php artisan migrate
+
 <!-- 6.php artisan db:seed -->
