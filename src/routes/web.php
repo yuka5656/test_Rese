@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,13 @@ use App\Http\Controllers\ShopController;
 |
 */
 
-Route::get('/', [ShopController::class, 'index']);
-Route::get('/register', [ShopController::class, 'register']);
+Route::middleware('auth')->group(function () {
+    Route::get('/', [ShopController::class, 'index']);
+});
+
+
+// Route::get('/register', [ShopController::class, 'register']);
 Route::get('/thanks', [ShopController::class, 'thank']);
-Route::get('/login', [ShopController::class, 'login']);
+// Route::get('/login', [ShopController::class, 'login']);
 Route::get('/my_page', [ShopController::class, 'my_page']);
 Route::get('/done', [ShopController::class, 'done']);

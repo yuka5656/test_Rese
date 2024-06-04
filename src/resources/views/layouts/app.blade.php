@@ -17,6 +17,22 @@
     <header class="header">
         <div class="header__menu">
             <a href="">メニュー</a>
+            <a href="/login">ログイン</a>
+            <nav>
+                    @if (Auth::check())
+                    <ul class="header-nav">
+                        <li class="header-nav__item">
+                            <a class="header-nav__link" href="/register">登録画面</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <form class="form" action="/logout" method="post">
+                            @csrf
+                                <button class="header-nav__button">ログアウト</button>
+                            </form>
+                        </li>
+                    </ul>
+                    @endif
+                </nav>
         </div>
     </header>
     <main>
