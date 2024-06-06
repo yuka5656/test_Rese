@@ -7,3 +7,9 @@ body {
 header {
     margin: 40px 0 50px 100px;
 }
+
+.header__logo h1{
+    color: blue;
+    display: inline-block;
+    margin-left: 25px;
+}

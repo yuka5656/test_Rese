@@ -7,10 +7,17 @@ input{
     outline: none;
 }
 
+.form__error {
+    background-color: #E6E6FA;
+    list-style: none;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
 .login-form__inner{
     width: 25%;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 100px;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     box-shadow: 5px 5px 5px #808080;

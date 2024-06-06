@@ -12,6 +12,11 @@
 @endsection
 
 @section('content')
+
+@foreach ($errors->all() as $error)
+<li class="form__error">{{$error}}</li>
+@endforeach
+
 <div class="login-form__content">
     <div class="login-form__inner">
         <div class="login-form_logo">
@@ -25,21 +30,11 @@
                     top: 33%; left:10%;" >mail</span>
                     <input class="group__input" type="email" name="email" value="{{ old('email') }}" placeholder="Email">
                 </div>
-                <div class="form__error">
-                    @error('email')
-                    {{ $message }}
-                    @enderror
-                </div>
                 <div class="form__group-content">
 
                     <span class="material-symbols-outlined"style="position: absolute;
                     top: 58%; left:10%;">lock</span>
                     <input class="group__input" type="password" name="password" placeholder="Password">
-                </div>
-                <div class="form__error">
-                    @error('password')
-                    {{ $message }}
-                    @enderror
                 </div>
                 <div class="form__group-login">
                     <button type="submit">ログイン</button>

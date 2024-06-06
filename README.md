@@ -49,23 +49,21 @@
 - お気に入りした飲食店を表示
 
 ## 使用技術
-　開発言語：PHP
-
-　フレームワーク：Laravel 3.8
-
-　バージョン管理：GitHub
+- 開発言語：PHP
+- フレームワーク：Laravel 3.8
+- バージョン管理：GitHub
 
 ## ER図
 ![ER図](img/index.drawio.png)
 
 ## 環境構築
-Dockerビルド
+- Dockerビルド
 
 1.git clone git
 
 2.docker-compose up -d --build
 
-Laravel環境構築
+- Laravel環境構築
 
 1.docker-compose exec php bash
 

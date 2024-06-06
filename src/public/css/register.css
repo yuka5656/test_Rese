@@ -1,5 +1,5 @@
 input {
-    margin: 20px 0 10px 30px;
+    margin: 15px 0 10px 30px;
     padding: 2px 110px 2px 5px;
     margin-left: 70px;
     border: none;
@@ -10,7 +10,7 @@ input {
 .register-form__inner {
     width: 25%;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 100px;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     box-shadow: 5px 5px 5px #808080;
@@ -24,8 +24,15 @@ input {
     border-radius: 5px 5px 0 0;
 }
 
+.form__error{
+    background-color: #E6E6FA;
+    list-style: none;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
 .form__group-register button {
-    margin: 20px 0 20px 72%;
+    margin: 15px 0 20px 72%;
     padding: 5px 20px;
     border: none;
     background-color: blue;

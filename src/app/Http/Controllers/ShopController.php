@@ -11,10 +11,15 @@ class ShopController extends Controller
         return view('index');
     }
 
-    // public function thank(){
-        
-    //     return view('thanks');
-    // }
+    public function login(){
+
+        return view('auth.login');
+    }
+
+    public function thank(){
+
+        return view('auth.thanks');
+    }
 
     public function my_page(){
         

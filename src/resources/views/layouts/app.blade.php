@@ -16,7 +16,8 @@
 <body>
     <header class="header">
         <div class="header__menu">
-            <a href="">メニュー</a>
+            <a href="/register">メニュー</a>
+            <h1 class="header__logo">Rese</h1>
             <a href="/login">ログイン</a>
             <nav>
                     @if (Auth::check())

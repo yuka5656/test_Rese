@@ -74,7 +74,7 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+    'home' => '/thanks',
 
     /*
     |--------------------------------------------------------------------------
@@ -143,6 +143,11 @@ return [
     | these features or you can even remove all of these if you need to.
     |
     */
+
+    'redirects' => [
+        'register' => '/thanks'
+    ],
+
 
     'features' => [
         Features::registration(),
