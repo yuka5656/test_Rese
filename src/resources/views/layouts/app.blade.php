@@ -17,9 +17,9 @@
     <header class="header">
         <div class="header__menu">
             <a href="/register">メニュー</a>
-            <h1 class="header__logo">Rese</h1>
-            <a href="/login">ログイン</a>
+            @yield('header')
             <nav>
+                <a href="/login">ログイン</a>
                     @if (Auth::check())
                     <ul class="header-nav">
                         <li class="header-nav__item">
@@ -30,11 +30,13 @@
                             @csrf
                                 <button class="header-nav__button">ログアウト</button>
                             </form>
+                            
                         </li>
                     </ul>
                     @endif
                 </nav>
         </div>
+        
     </header>
     <main>
         @yield('content')
