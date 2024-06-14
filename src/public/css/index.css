@@ -1,0 +1,90 @@
+h1 {
+    color: blue;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.header-form__content{
+    display: inline-block;
+    position: relative;
+}
+
+.header-form__content-search{
+    margin-left: 550px;
+    box-shadow: 3px 3px 3px #808080;
+}
+
+
+.header-form__search-select{
+    padding: 10px 15px 10px 5px;
+    margin-right: -6px;
+    border: none;
+    border-right: 1px solid #D3D3D3;
+}
+
+.header-form__search-input{
+    padding: 11px 160px 11px 45px;
+    margin-left: 1px;
+    border: none;
+}
+
+.header-form__content button{
+    position: absolute;
+    top: 5px;
+    left: 68%;
+    background-color: #fff;
+    color: #D3D3D3;
+}
+
+/* 店舗一覧カード */
+.card {
+    width: 300px;
+    margin: 100px auto 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card__img img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card__content {
+    padding: 5px 25px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.card__content-cat {
+    display: inline-block;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+
+.card__content-tag {
+    font-size: 14px;
+}
+
+.card__content-tag-text {
+    color: #000;
+    display: inline-block;
+}
+
+.card__content-tag-item--button {
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.card__content span {
+    font-size: 35px;
+    margin-left: 100px;
+    vertical-align: middle;
+}

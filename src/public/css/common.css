@@ -1,0 +1,9 @@
+html,
+body {
+    /* height: 80%; */
+    background-color: #D3D3D3;
+}
+
+header {
+    margin: 40px 0 50px 100px;
+}
