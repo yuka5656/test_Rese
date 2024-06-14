@@ -24,6 +24,6 @@ class RegisterContorller extends Controller
 
     public function redirectPath(){
         
-        return '/thanks';
+        return 'thanks';
     }
 }
