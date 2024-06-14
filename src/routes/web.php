@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('auth')->group(function () {
+    Route::get('/', [ShopController::class, 'index']);
 });
+Route::get('/login', [ShopController::class, 'login']);
+Route::get('/thanks', [ShopController::class, 'thank']);
+Route::get('/my_page', [ShopController::class, 'my_page']);
+Route::get('/done', [ShopController::class, 'done']);

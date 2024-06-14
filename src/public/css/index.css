@@ -1,0 +1,37 @@
+h1 {
+    color: blue;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.header-form__content{
+    display: inline-block;
+    position: relative;
+}
+
+.header-form__content-search{
+    margin-left: 550px;
+    box-shadow: 3px 3px 3px #808080;
+}
+
+
+.header-form__search-select{
+    padding: 10px 15px 10px 5px;
+    margin-right: -6px;
+    border: none;
+    border-right: 1px solid #D3D3D3;
+}
+
+.header-form__search-input{
+    padding: 10px 160px 10px 50px;
+    margin-left: 1px;
+    border: none;
+}
+
+.header-form__content button{
+    position: absolute;
+    top: 5px;
+    left: 68%;
+    background-color: #fff;
+    color: #D3D3D3;
+}

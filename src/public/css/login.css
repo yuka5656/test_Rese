@@ -1,0 +1,40 @@
+input{
+    margin: 20px 0 10px 30px;
+    padding: 2px 110px 2px 5px;
+    margin-left: 70px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+.form__error {
+    background-color: #E6E6FA;
+    list-style: none;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.login-form__inner{
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 5px 5px 5px #808080;
+    position: relative;
+}
+
+.login-form_logo{
+    background-color: blue;
+    color: #fff;
+    padding: 1px 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.form__group-login button{
+    margin: 15px 0 20px 65%;
+    padding: 5px 20px;
+    border: none;
+    background-color: blue;
+    color: #fff;
+}
