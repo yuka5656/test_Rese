@@ -15,6 +15,7 @@ class RestaurantsTableSeeder extends Seeder
     public function run()
     {
         $shop = [
+            'id' => '1',
             'prefecture_id' => '13',
             'genre_id' => '1',
             'restaurant_name' => '仙人',
@@ -23,6 +24,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '2',
             'prefecture_id' => '27',
             'genre_id' => '2',
             'restaurant_name' => '牛助',
@@ -31,6 +33,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '3',
             'prefecture_id' => '40',
             'genre_id' => '3',
             'restaurant_name' => '戦慄',
@@ -39,6 +42,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '4',
             'prefecture_id' => '13',
             'genre_id' => '4',
             'restaurant_name' => 'ルーク',
@@ -47,6 +51,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '5',
             'prefecture_id' => '40',
             'genre_id' => '5',
             'restaurant_name' => '志摩屋',
@@ -55,6 +60,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '6',
             'prefecture_id' => '13',
             'genre_id' => '2',
             'restaurant_name' => '香',
@@ -63,6 +69,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '7',
             'prefecture_id' => '27',
             'genre_id' => '4',
             'restaurant_name' => 'JJ',
@@ -71,6 +78,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '8',
             'prefecture_id' => '13',
             'genre_id' => '5',
             'restaurant_name' => 'らーめん極み',
@@ -79,6 +87,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '9',
             'prefecture_id' => '27',
             'genre_id' => '3',
             'restaurant_name' => '鳥雨',
@@ -87,6 +96,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '10',
             'prefecture_id' => '13',
             'genre_id' => '1',
             'restaurant_name' => '築地色合',
@@ -95,6 +105,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '11',
             'prefecture_id' => '27',
             'genre_id' => '2',
             'restaurant_name' => '晴海',
@@ -103,6 +114,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '12',
             'prefecture_id' => '40',
             'genre_id' => '2',
             'restaurant_name' => '三子',
@@ -111,6 +123,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '13',
             'prefecture_id' => '13',
             'genre_id' => '3',
             'restaurant_name' => '八戒',
@@ -119,6 +132,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '14',
             'prefecture_id' => '27',
             'genre_id' => '1',
             'restaurant_name' => '福助',
@@ -127,6 +141,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '15',
             'prefecture_id' => '13',
             'genre_id' => '5',
             'restaurant_name' => 'ラー北',
@@ -135,6 +150,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '16',
             'prefecture_id' => '27',
             'genre_id' => '3',
             'restaurant_name' => '翔',
@@ -143,6 +159,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '17',
             'prefecture_id' => '13',
             'genre_id' => '1',
             'restaurant_name' => '経緯',
@@ -151,6 +168,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '18',
             'prefecture_id' => '13',
             'genre_id' => '2',
             'restaurant_name' => '漆',
@@ -159,6 +177,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '19',
             'prefecture_id' => '40',
             'genre_id' => '4',
             'restaurant_name' => 'THE TOOL',
@@ -167,6 +186,7 @@ class RestaurantsTableSeeder extends Seeder
         ];
         DB::table('restaurants')->insert($shop);
         $shop = [
+            'id' => '20',
             'prefecture_id' => '27',
             'genre_id' => '1',
             'restaurant_name' => '木船',
