@@ -12,20 +12,20 @@
 <h1 class="header__logo">Rese</h1>
 <div class="header-form__content">
     <form action="/" method="get" class="header-form__content-search">
-        <select class="header-form__search-select" name="prefectures" id="">
+        <select class="header-form__search-select" name="prefecture_id" id="">
             <option value="">All area</option>
             @foreach ($prefectures as $prefecture)
             <option value="{{ $prefecture->id}}">{{ $prefecture->prefecture_name }}</option>
             @endforeach
         </select>
-        <select name="genres" id="" class="header-form__search-select">
+        <select name="genre_id" id="" class="header-form__search-select">
             <option value="">All genre</option>
             @foreach ($genres as $genre)
             <option value="{{ $genre->id }}">{{ $genre->genre_name }}</option>
             @endforeach
         </select>
         <button style="border:none"><span class="material-symbols-outlined">search</span></button>
-        <input type="text" class="header-form__search-input" placeholder="Search...">
+        <input type="text" name="keyword" class="header-form__search-input" placeholder="Search..." value="{{ old('keyword') }}">
     </form>
 </div>
 @endsection
@@ -46,9 +46,9 @@
                 </p>
                 <p class="card__content-tag-text">#{{ $restaurant->genre_name }}</p>
             </div>
-            <button class="card__content-tag-item card__content-tag-item--button">
+            <a href="/detail" class="card__content-tag-item card__content-tag-item--button">
                 詳しく見る
-            </button>
+            </a>
             <span class="material-symbols-outlined">
                 favorite
             </span>

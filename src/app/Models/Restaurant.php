@@ -35,4 +35,17 @@ class Restaurant extends Model
 
         return $restaurant;
     }
+
+    // public function scopePrefectureSearch($query, $prefecture){
+    //     if (!empty($prefecture_id)) {
+    //         $query->where('prefecture_id', $prefecture_id);
+    //     }
+    // }
+
+    // public function scopeKeywordSearch($query, $keyword) {
+    //     if (!empty($keyword)) {
+    //         $restaurants->where('restaurant_name', 'link', '%' . $keyword . '%');
+    //     }
+
+    // }
 }

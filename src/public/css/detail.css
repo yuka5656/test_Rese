@@ -1,0 +1,35 @@
+main{
+    margin-left: 100px;
+}
+
+
+.detail__content-top button{
+    background-color: #fff;
+    border-style: none;
+    padding: 5px 10px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.detail__content-top h1{
+    display: inline-block;
+    font-size: 32px;
+}
+
+
+.detail__content-left{
+    width: 50%;
+}
+
+.detail__content-img img{
+    width: 100%;
+}
+
+.detail__bottom-tag{
+    display: inline-block;
+}
+
+.detail__content-text p{
+    width: 100%;
+}
+
+
