@@ -17,6 +17,7 @@
     <header class="header">
         <div class="header__menu">
             <a href="/register">メニュー</a>
+            <h1 class="header__logo" >Rese</h1>
             @yield('header')
             <nav>
                 <a href="/login">ログイン</a>

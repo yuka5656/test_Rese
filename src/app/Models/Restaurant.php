@@ -26,26 +26,31 @@ class Restaurant extends Model
         return $this->hasMany(Genre::class);
     }
 
-    public function getRestaurant(){
+    public function getRestaurant($request){
 
-        $restaurant = DB::table('restaurants')
-                    ->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id')
-                    ->join('genres', 'genres.id', '=', 'restaurants.genre_id')
-                    ->get();
+        $query = DB::table('restaurants');
+        $query->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id');
+        $query->join('genres', 'genres.id', '=', 'restaurants.genre_id');
+
+        $keyword = $request->input('keyword');
+        if ($keyword !== null) {
+            $query->where('restaurant_name', 'like', '%' . $keyword . '%');
+        }
+
+        $search_genre = $request->input('genre_id');
+        if ($search_genre !== null) {
+            $query->where('genre_id', '=', $search_genre);
+        }
+
+        $search_erea =$request->input('prefecture_id');
+        if ($search_erea !== null) {
+            $query->where('prefecture_id', '=', $search_erea);
+        }
+
+        $query->orderBy('restaurants.id', 'asc');
+
+        $restaurant = $query->get();
 
         return $restaurant;
     }
-
-    // public function scopePrefectureSearch($query, $prefecture){
-    //     if (!empty($prefecture_id)) {
-    //         $query->where('prefecture_id', $prefecture_id);
-    //     }
-    // }
-
-    // public function scopeKeywordSearch($query, $keyword) {
-    //     if (!empty($keyword)) {
-    //         $restaurants->where('restaurant_name', 'link', '%' . $keyword . '%');
-    //     }
-
-    // }
 }

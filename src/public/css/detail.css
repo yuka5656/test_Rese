@@ -1,17 +1,26 @@
+header{
+    width: 50%;
+}
+
 main{
     margin-left: 100px;
 }
 
+.detail__content-top{
+    display: flex;
+    align-items: center;
+}
 
 .detail__content-top button{
     background-color: #fff;
     border-style: none;
     padding: 5px 10px;
+    margin-right: 10px;
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
 }
 
 .detail__content-top h1{
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 32px;
 }
 

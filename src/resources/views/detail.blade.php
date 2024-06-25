@@ -24,6 +24,12 @@
     </div>
 </div>
 <div class="detail__content-right">
-
+    <div class="detail__content-logo">
+        <h2>予約</h2>
+    </div>
+    <div class="detail__content-form">
+        <input type="date">
+        <input type="text">
+    </div>
 </div>
 @endsection

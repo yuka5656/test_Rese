@@ -26,38 +26,15 @@ class ShopController extends Controller
 
         $genres = Genre::all();
 
-        $restaurants = $this->restaurant->getRestaurant();
+        $restaurants = $this->restaurant->getRestaurant($request);
 
-        $query = DB::table('restaurants');
-        $query->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id');
-        $query->join('genres', 'genres.id', '=', 'restaurants.genre_id');
-        $query->select('restaurant_name');
+        $search_genre = $request->genre_id;
 
-        $keyword = $request->input('keyword');
-        if ($keyword !== null) {
-            $query->where('restaurant_name', 'link', '%' . $keyword . '%');
-        }
-        // dd($keyword);
+        $search_erae = $request->prefecture_id;
 
+        $keyword = $request->keyword;
 
-        $content = $query->get();
-
-        // dd($keyword);
-
-        return view('index', compact('restaurants', 'prefectures', 'genres','keyword', 'content'));
-    }
-
-    public function search(Request $request){
-
-        $genres = Genre::all();
-
-        $g = $request->input('genre_id');
-
-        $query = $this->restaurant->getRestaurant();
-
-
-        // dd($keyword);
-        return view('index', compact('search', 'keyword'));
+        return view('index', compact('restaurants', 'prefectures', 'genres', 'search_genre', 'search_genre', 'keyword'));
     }
 
     public function login(){
@@ -71,7 +48,7 @@ class ShopController extends Controller
     }
 
     public function my_page(){
-        
+
         return view('mypage');
     }
 
@@ -80,7 +57,7 @@ class ShopController extends Controller
     }
 
     public function done(){
-        
+
         return view('done');
     }
 }
