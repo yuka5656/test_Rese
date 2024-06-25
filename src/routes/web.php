@@ -17,7 +17,6 @@ use App\Http\Controllers\RegisterController;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [ShopController::class, 'index']);
-    Route::get('/search/genre', [ShopController::class, 'search']);
 });
 Route::get('/login', [ShopController::class, 'login']);
 Route::get('/thanks', [ShopController::class, 'thank']);

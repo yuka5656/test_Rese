@@ -25,19 +25,16 @@ class ShopController extends Controller
 
         $genres = Genre::all();
 
-        $restaurants = $this->restaurant->getRestaurant();
-        // dd($restaurants);
+        $restaurants = $this->restaurant->getRestaurant($request);
 
-        return view('index', compact('restaurants', 'prefectures', 'genres'));
+        $search_genre = $request->genre_id;
+
+        $search_erae = $request->prefecture_id;
+
+        $keyword = $request->keyword;
+
+        return view('index', compact('restaurants', 'prefectures', 'genres', 'search_genre', 'search_genre', 'keyword'));
     }
-
-    public function search(Request $request){
-
-        $search = Genre::with('genre_name')->CategorySearch();
-
-        return view('index')->compact('');
-    }
-
     public function login(){
 
         return view('auth.login');
