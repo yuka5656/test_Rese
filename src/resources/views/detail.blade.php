@@ -5,31 +5,69 @@
 @endsection
 
 @section('content')
-<div class="detail__content-left">
-    <div class="detail__content-top">
-        <button onclick="history.back(-1)"><</button>
-        <h1>店名</h1>
-    </div>
-    <div class="detail__content-img">
-        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="" />
-    </div>
-    <div class="detail__content-bottom">
-        <div class="detail__content-bottom-tag">
-            <p class="detail__bottom-tag">#エリア</p>
-            <p class="detail__bottom-tag">#ジャンル</p>
+<div class="detail__content">
+    <div class="detail__content-left">
+        <div class="detail__content-top">
+            <button onclick="history.back(-1)"><</button>
+            <h1>{{ $item->restaurant_name }}</h1>
         </div>
-        <div class="detail__content-text">
-            <p>料理長厳選の食材から作る寿司を用いたコースをぜひお楽しみください。食材・味・価格、お客様の満足度を徹底的に追及したお店です。特別な日のお食事、ビジネス接待まで気軽に使用することができます。</p>
+        <div class="detail__content-img">
+            <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="" />
+        </div>
+        <div class="detail__content-bottom">
+            <div class="detail__content-bottom-tag">
+                <p class="detail__bottom-tag">#{{ $item->prefecture_name }}</p>
+                <p class="detail__bottom-tag">#{{ $item->genre_name }}</p>
+            </div>
+            <div class="detail__content-text">
+                <p>{{ $item->summary }}</p>
+            </div>
         </div>
     </div>
-</div>
-<div class="detail__content-right">
-    <div class="detail__content-logo">
-        <h2>予約</h2>
-    </div>
-    <div class="detail__content-form">
-        <input type="date">
-        <input type="text">
+    <div class="detail__content-right">
+        <div class="detail__content-logo">
+            <h2>予約</h2>
+        </div>
+        <div class="detail__content-form">
+            <form action="">
+                <div class="content-form__input">
+                    <input type="date">
+                </div>
+                <div class="content-form__input">
+                    <select name="" id="">
+                        @for($i = 0; $i <= 24; $i++)
+                            @for($j = 0; $j <= 5; $j++)
+                        <option label="{{$i}}:{{$j}}0" value=""></option>
+                            @endfor
+                        @endfor
+                    </select>
+                </div>
+                <div class="content-form__input">
+                    <input type="number">
+                </div>
+                <div class="content-form__table">
+                    <table>
+                        <tr>
+                            <td><span>Shop</span></td>
+                            <td>店名</td>
+                        </tr>
+                        <tr>
+                            <td><span>Date</span></td>
+                            <td>日付</td>
+                        </tr>
+                        <tr>
+                            <td><span>Time</span></td>
+                            <td>時間</td>
+                        </tr>
+                        <tr>
+                            <td><span>Number</span></td>
+                            <td>人数</td>
+                        </tr>
+                    </table>
+                </div>
+                <button>予約する</button>
+            </form>
+        </div>
     </div>
 </div>
 @endsection

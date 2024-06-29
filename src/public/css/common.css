@@ -4,13 +4,5 @@ body {
 }
 
 header {
-    margin: 40px 0 50px 100px;
-    /* width: 50%; */
-}
-
-.header__logo a {
-    color: blue;
-    font-size: 26px;
-    display: inline-block;
-    margin-left: 25px;
+    margin: 10px 0 50px 100px;
 }

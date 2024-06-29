@@ -53,4 +53,14 @@ class Restaurant extends Model
 
         return $restaurant;
     }
+
+    public function getContent(){
+
+        $restaurant = DB::table('restaurants')
+                    ->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id')
+                    ->join('genres', 'genres.id', '=', 'restaurants.genre_id')
+                    ->get();
+
+        return $restaurant;
+    }
 }

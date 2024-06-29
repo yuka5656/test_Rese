@@ -6,6 +6,15 @@ main{
     margin-left: 100px;
 }
 
+input{
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.detail__content{
+    display: flex;
+}
+
 .detail__content-top{
     display: flex;
     align-items: center;
@@ -20,7 +29,6 @@ main{
 }
 
 .detail__content-top h1{
-    /* display: inline-block; */
     font-size: 32px;
 }
 
@@ -30,7 +38,7 @@ main{
 }
 
 .detail__content-img img{
-    width: 100%;
+    width: 85%;
 }
 
 .detail__bottom-tag{
@@ -41,4 +49,34 @@ main{
     width: 100%;
 }
 
+.detail__content-right{
+    background-color: #305DFF;
+    width: 40%;
+    margin: -110px 0 30px 50px;
+    border-radius: 10px;
+}
 
+.detail__content-logo h2{
+    color: #fff;
+    margin-left: 25px;
+}
+
+.content-form__table{
+    background-color: #4C7EFF;
+    margin: 20px 40px 0 25px;
+    color: #fff;
+}
+
+td{
+    padding: 5px 10px;
+}
+
+.detail__content-form button{
+    margin-top: 340px;
+    padding: 10px 241px;
+    background-color: #0438FF;
+    color: #fff;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
