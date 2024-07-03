@@ -29,8 +29,10 @@ class Restaurant extends Model
     public function getRestaurant($request){
 
         $query = DB::table('restaurants');
-        $query->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id');
-        $query->join('genres', 'genres.id', '=', 'restaurants.genre_id');
+        $query->join('prefectures', 'restaurants.prefecture_id', '=', 'prefectures.id');
+        // $query->select('restaurants.*', 'prefectures.id as prefecture_id', 'prefectures.prefecture_name');
+        $query->join('genres', 'restaurants.genre_id', '=', 'genres.id');
+        // $query->select('restaurants.*', 'genres.id as genre_id', 'genres.genre_name');
 
         $keyword = $request->input('keyword');
         if ($keyword !== null) {
@@ -56,11 +58,10 @@ class Restaurant extends Model
 
     public function getContent(){
 
-        $restaurant = DB::table('restaurants')
-                    ->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id')
+        $item = DB::table('restaurants')
                     ->join('genres', 'genres.id', '=', 'restaurants.genre_id')
-                    ->get();
+                    ->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id');
 
-        return $restaurant;
+        return $item;
     }
 }

@@ -45,7 +45,7 @@
                 </p>
                 <p class="card__content-tag-text">#{{ $restaurant->genre_name }}</p>
             </div>
-            <a href="/detail/{id}, ['id'=>$restaurant->id]" class="card__content-tag-item card__content-tag-item--button">
+                <a href="/detail/{{$restaurant->id}}" class="card__content-tag-item card__content-tag-item--button">
                 詳しく見る
             </a>
             <span class="material-symbols-outlined">

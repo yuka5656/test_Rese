@@ -12,7 +12,7 @@
             <h1>{{ $item->restaurant_name }}</h1>
         </div>
         <div class="detail__content-img">
-            <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt="" />
+            <img src="{{ $item->image_url }}" alt="" />
         </div>
         <div class="detail__content-bottom">
             <div class="detail__content-bottom-tag">
@@ -35,21 +35,51 @@
                 </div>
                 <div class="content-form__input">
                     <select name="" id="">
-                        @for($i = 0; $i <= 24; $i++)
-                            @for($j = 0; $j <= 5; $j++)
-                        <option label="{{$i}}:{{$j}}0" value=""></option>
-                            @endfor
-                        @endfor
+                        <option label="" value="">00:00</option>
+                        <option label="" value="">01:00</option>
+                        <option label="" value="">02:00</option>
+                        <option label="" value="">03:00</option>
+                        <option label="" value="">04:00</option>
+                        <option label="" value="">05:00</option>
+                        <option label="" value="">06:00</option>
+                        <option label="" value="">07:00</option>
+                        <option label="" value="">08:00</option>
+                        <option label="" value="">09:00</option>
+                        <option label="" value="">10:00</option>
+                        <option label="" value="">11:00</option>
+                        <option label="" value="">12:00</option>
+                        <option label="" value="">13:00</option>
+                        <option label="" value="">14:00</option>
+                        <option label="" value="">15:00</option>
+                        <option label="" value="">16:00</option>
+                        <option label="" value="">17:00</option>
+                        <option label="" value="">18:00</option>
+                        <option label="" value="">19:00</option>
+                        <option label="" value="">20:00</option>
+                        <option label="" value="">21:00</option>
+                        <option label="" value="">22:00</option>
+                        <option label="" value="">23:00</option>
                     </select>
                 </div>
                 <div class="content-form__input">
-                    <input type="number">
+                    <select name="" id="">
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                        <option value="3">3人</option>
+                        <option value="4">4人</option>
+                        <option value="5">5人</option>
+                        <option value="6">6人</option>
+                        <option value="7">7人</option>
+                        <option value="8">8人</option>
+                        <option value="9">9人</option>
+                        <option value="10">10人</option>
+                    </select>
                 </div>
                 <div class="content-form__table">
                     <table>
                         <tr>
                             <td><span>Shop</span></td>
-                            <td>店名</td>
+                            <td>{{ $item->restaurant_name }}</td>
                         </tr>
                         <tr>
                             <td><span>Date</span></td>

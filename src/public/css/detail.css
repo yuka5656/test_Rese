@@ -11,6 +11,12 @@ input{
     margin-bottom: 10px;
 }
 
+select{
+    margin-left: 25px;
+    margin-bottom: 10px;
+    padding: 3px 400px 3px 0;
+}
+
 .detail__content{
     display: flex;
 }
