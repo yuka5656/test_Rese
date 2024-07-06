@@ -26,7 +26,6 @@ class ShopController extends Controller
         $genres = Genre::all();
 
         $restaurants = $this->restaurant->getRestaurant($request);
-        // dd($restaurants);
 
         $search_genre = $request->genre_id;
 
@@ -54,15 +53,7 @@ class ShopController extends Controller
 
     public function detail($restaurant_id){
 
-        $item = Restaurant::find($restaurant_id);
-
-        // $genre = Genre::find('genre_name');
-
-        // $content = $this->restaurant->getContent();
-
-        // $item = getContent()->find($restaurant_id);
-        dd($item);
-
+        $item = $this->restaurant->getContent($restaurant_id);
 
         return view('detail', compact('item'));
     }
