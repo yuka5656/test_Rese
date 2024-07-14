@@ -49,7 +49,6 @@ class ShopController extends Controller
     public function my_page(){
 
         $reservations = Reservation::all();
-        // dd($reservations);
 
         return view('mypage', compact('reservations'));
     }
