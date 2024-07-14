@@ -35,7 +35,6 @@ class ShopController extends Controller
 
         return view('index', compact('restaurants', 'prefectures', 'genres', 'search_genre', 'search_genre', 'keyword'));
     }
-
     public function login(){
 
         return view('auth.login');
