@@ -10,13 +10,13 @@ use App\Models\Genre;
 use App\Models\Prefecture;
 use App\Models\Preservation;
 use App\Models\Favorite;
+use Illuminate\Support\Facades\DB;
 
 class ShopController extends Controller
 {
     protected $restaurant;
     public function __construct(Restaurant $restaurant){
         $this->restaurant = $restaurant;
-
     }
 
     public function index(Request $request){
@@ -46,12 +46,25 @@ class ShopController extends Controller
     }
 
     public function my_page(){
-        
-        return view('mypage');
+
+        $reservations = Reservation::all();
+
+        return view('mypage', compact('reservations'));
     }
 
-    public function done(){
-        
+    public function detail(Request $request, $restaurant_id){
+
+        $item = $this->restaurant->getContent($restaurant_id);
+
+        return view('detail', compact('item'));
+    }
+
+    public function store(Request $request){
+
+        $contact = $request->only(['date','time', 'number_of_people', 'restaurant_id', 'user_id']);
+
+        Reservation::create($contact);
+
         return view('done');
     }
 }

@@ -9,13 +9,12 @@
 @endsection
 
 @section('header')
-<h1 class="header__logo">Rese</h1>
 <div class="header-form__content">
     <form action="/" method="get" class="header-form__content-search">
         <select class="header-form__search-select" name="prefecture_id" id="">
             <option value="">All area</option>
             @foreach ($prefectures as $prefecture)
-            <option value="{{ $prefecture->id}}">{{ $prefecture->prefecture_name }}</option>
+            <option value="{{ $prefecture->id }}">{{ $prefecture->prefecture_name }}</option>
             @endforeach
         </select>
         <select name="genre_id" id="" class="header-form__search-select">
@@ -46,9 +45,9 @@
                 </p>
                 <p class="card__content-tag-text">#{{ $restaurant->genre_name }}</p>
             </div>
-            <button class="card__content-tag-item card__content-tag-item--button">
+                <a href="/detail/{{$restaurant->id}}" class="card__content-tag-item card__content-tag-item--button">
                 詳しく見る
-            </button>
+            </a>
             <span class="material-symbols-outlined">
                 favorite
             </span>

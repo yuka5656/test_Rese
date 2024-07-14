@@ -17,6 +17,13 @@
     <header class="header">
         <div class="header__menu">
             <a href="/register">メニュー</a>
+            <a href="/" style="
+            color: blue;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 25px;">Rese</a>
             @yield('header')
             <nav>
                 <a href="/login">ログイン</a>
