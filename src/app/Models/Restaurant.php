@@ -47,7 +47,6 @@ class Restaurant extends Model
         if ($search_erea !== null) {
             $query->where('prefecture_id', '=', $search_erea);
         }
-        // $query->where('restaurants.id', 8);
 
         $query->orderBy('restaurants.id', 'asc');
 
