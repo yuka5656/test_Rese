@@ -7,6 +7,13 @@ input {
     outline: none;
 }
 
+
+.register-form__content{
+    width: 100%;
+}
+
+
+
 .register-form__inner {
     width: 25%;
     margin: 0 auto;

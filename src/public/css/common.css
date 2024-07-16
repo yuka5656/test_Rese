@@ -1,8 +1,105 @@
 html,
 body {
     background-color: #D3D3D3;
+    font-family: Arial, sans-serif;
 }
 
 header {
     margin: 10px 0 50px 100px;
+}
+
+.header-nav__button{
+    border: none;
+    background-color: #fff;
+    color: blue;
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ヘッダーメニュー */
+.menu-container {
+    position: fixed;
+    z-index: 1;
+    top: 23px;
+    left: 150px;
+    overflow: hidden;
+}
+
+/* メニューボタンのスタイル */
+.menu-button {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 90px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: blue;
+    padding: 4px 5px;
+    border-radius: 3px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* メニューバーのスタイル */
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+/* メニューボタン1つ目のバーのアニメーション */
+#menu-toggle:checked~.menu-button .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 4px);
+}
+
+/* メニューボタン2つ目のバーのアニメーション */
+#menu-toggle:checked~.menu-button .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* メニューボタン3つ目のバーのアニメーション */
+#menu-toggle:checked~.menu-button .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.4s;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+#menu-toggle:checked~.menu {
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin-top: 20%;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+    padding: 10px 0;
+    transition: 0.2s;
+    text-align: center;
+    font-size: 30px;
+}
+
+.menu ul li a:hover {
+    color: black;
 }
