@@ -22,6 +22,7 @@ Route::get('/login', [ShopController::class, 'login']);
 Route::get('/thanks', [ShopController::class, 'thank']);
 
 Route::get('/my_page', [ShopController::class, 'my_page']);
+Route::post('/my_page/delete', [ShopController::class, 'delete']);
 Route::get('/done', [ShopController::class, 'done']);
 Route::get('/detail/{restaurant_id}', [ShopController::class, 'detail']);
 Route::post('/detail/create', [ShopController::class, 'store']);

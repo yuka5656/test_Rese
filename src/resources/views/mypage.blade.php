@@ -5,6 +5,10 @@
 <!-- ハート -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 @endsection
+<!-- バツ -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!-- 時計 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 @section('content')
 <div class="mypage__name-title">
@@ -17,11 +21,32 @@
         </div>
         @foreach ($reservations as $reservation)
         <div class="mypage__reservation-group">
-            <div class="mypage__reservation-group-top">
+            <div class="mypage__reservation-group-top"
+            style="display: flex;
+                align-items: center;
+                position: relative;">
+                <span class="material-symbols-outlined"
+                style="
+                margin-right: 15px;
+                ">
+                schedule
+                </span>
                 <p>予約</p>
+                <form method="POST" action="/my_page/delete?id={{ $reservation->id }}">
+                @csrf
+                    <button style="
+                            position: absolute;
+                            top: 28%; left:180%;
+                            background-color: #305DFF;
+                            border: none;">
+                        <span class="material-symbols-outlined" style="color: #fff;
+                            font-size: 30px;
+                        ">cancel</span>
+                    </button>
+                </form>
             </div>
             <div class="mypage__reservation-group-table">
-                <table>
+                <table style="color: #fff;">
                     <tr>
                         <td><span>Shop</span></td>
                         <td>{{ $reservation->restaurant_id }}</td>

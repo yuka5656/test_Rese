@@ -53,6 +53,12 @@ class ShopController extends Controller
         return view('mypage', compact('reservations'));
     }
 
+    public function delete(Request $request){
+
+        Reservation::find($request->id)->delete();
+        return redirect('my_page');
+    }
+
     public function detail(Request $request, $restaurant_id){
 
         $item = $this->restaurant->getContent($restaurant_id);
@@ -68,4 +74,5 @@ class ShopController extends Controller
 
         return view('done');
     }
+
 }
