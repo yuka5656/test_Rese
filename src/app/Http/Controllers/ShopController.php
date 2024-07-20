@@ -11,6 +11,7 @@ use App\Models\Prefecture;
 use App\Models\Preservation;
 use App\Models\Favorite;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
@@ -34,6 +35,36 @@ class ShopController extends Controller
         $keyword = $request->keyword;
 
         return view('index', compact('restaurants', 'prefectures', 'genres', 'search_genre', 'search_genre', 'keyword'));
+    }
+
+    public function favorite (Request $request, Favorite $favorite){
+
+        $user = Auth::user();
+
+        if ($user) {
+            $user_id = Auth::id();
+
+        $existingFavorite = Favorite::where('favorite_id', $favorite->id)
+            ->where('user_id', $user_id)
+            ->first();
+        }
+
+        dd($existingFavorite);
+
+        if (!$existingFavorite) {
+                $favorite = new Favorite();
+                $favorite->favorite_id = $article->id;
+                $favorite->user_id = $user_id;
+                $favorite->save();
+            }
+
+        
+
+        // $favorite = $request->only(['user_id', 'restaurant_id']);
+        // Favorite::create($favorite);
+
+        return redirect('/');
+
     }
 
     public function login(){

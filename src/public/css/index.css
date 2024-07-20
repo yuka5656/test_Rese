@@ -54,7 +54,7 @@ main{
 }
 
 .card__content {
-    padding: 5px 25px;
+    padding: 5px 25px 20px;
     background-color: #fff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -87,9 +87,20 @@ main{
     margin-top: 15px;
 }
 
-.card__content span {
+.card__content{
+    position: relative;
+}
+
+.card__content span{
     font-size: 35px;
-    margin-top: -50px;
-    margin-left: 220px;
+}
+
+.card__content button {
     vertical-align: middle;
+    position: absolute;
+    top: 68%;
+    left: 79%;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
 }

@@ -17,7 +17,10 @@ use App\Http\Controllers\RegisterController;
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [ShopController::class, 'index']);
+    Route::post('/favorite/{favorite_id}', [ShopController::class, 'favorite']);
+    Route::delete('/favorite/{favorite_id}/delete', [ShopController::class, 'erase']);
 });
+
 Route::get('/login', [ShopController::class, 'login']);
 Route::get('/thanks', [ShopController::class, 'thank']);
 
