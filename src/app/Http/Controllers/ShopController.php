@@ -34,7 +34,6 @@ class ShopController extends Controller
         return view('index', compact('restaurants', 'prefectures', 'genres', 'search_genre', 'search_genre', 'keyword'));
     }
 
-
     public function favorite (Request $request, $restaurant_id){
 
         $user = Auth::user();
