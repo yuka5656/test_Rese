@@ -48,9 +48,16 @@
                 <a href="/detail/{{$restaurant->id}}" class="card__content-tag-item card__content-tag-item--button">
                 詳しく見る
             </a>
-            <span class="material-symbols-outlined">
-                favorite
-            </span>
+            <form method="GET" action="/favorite/{restaurant_id}">
+            @csrf
+                <input type="hidden" class="input" name="user_id" value="{{ Auth::user()->id }}">
+                <input type="hidden" class="input" name="restaurant_id" value="{{ $restaurant->id }}">
+                <button type="submit">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </button>
+            </form>
         </div>
     </div>
 </div>

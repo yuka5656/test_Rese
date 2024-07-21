@@ -9,6 +9,14 @@ td{
     white-space: nowrap;
 }
 
+tr{
+    color: #fff;
+}
+
+.mypage__reservation-group-top span{
+    display: inline-block;
+}
+
 .mypage__reservation {
     display: flex;
     justify-content: space-around;
