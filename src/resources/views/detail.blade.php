@@ -29,12 +29,13 @@
             <h2>予約</h2>
         </div>
         <div class="detail__content-form">
-            <form action="POST">
+            <form method="POST" action="/detail/create">
+            @csrf
                 <div class="content-form__input">
-                    <input type="date" onChange="this.form.day.value=this.options[selectedIndex].text">
+                    <input type="date" name="date" value="<?php echo date('Y-m-d'); ?>" onChange="this.form.day.value=this.form.date.value">
                 </div>
                 <div class="content-form__input">
-                    <select name="time" id="" onChange="this.form.unit.value=this.options[selectedIndex].text">
+                    <select name="time" onChange="this.form.unit.value=this.options[selectedIndex].text">
                         <option label="" value="00:00">00:00</option>
                         <option label="" value="01:00">01:00</option>
                         <option label="" value="02:00">02:00</option>
@@ -43,7 +44,7 @@
                         <option label="" value="05:00">05:00</option>
                         <option label="" value="06:00">06:00</option>
                         <option label="" value="07:00">07:00</option>
-                        <option label="" value="-8:00">08:00</option>
+                        <option label="" value="08:00">08:00</option>
                         <option label="" value="09:00">09:00</option>
                         <option label="" value="10:00">10:00</option>
                         <option label="" value="11:00">11:00</option>
@@ -62,18 +63,18 @@
                     </select>
                 </div>
                 <div class="content-form__input">
-                    <select name="time" id=""
+                    <select name="number_of_people"
                     onChange="this.form.number.value=this.options[selectedIndex].text">
-                        <option value="1人">1人</option>
-                        <option value="2人">2人</option>
-                        <option value="3人">3人</option>
-                        <option value="4人">4人</option>
-                        <option value="5人">5人</option>
-                        <option value="6人">6人</option>
-                        <option value="7人">7人</option>
-                        <option value="8人">8人</option>
-                        <option value="9人">9人</option>
-                        <option value="10人">10人</option>
+                        <option value="1">1人</option>
+                        <option value="2">2人</option>
+                        <option value="3">3人</option>
+                        <option value="4">4人</option>
+                        <option value="5">5人</option>
+                        <option value="6">6人</option>
+                        <option value="7">7人</option>
+                        <option value="8">8人</option>
+                        <option value="9">9人</option>
+                        <option value="10">10人</option>
                     </select>
                 </div>
                 <div class="content-form__table">
@@ -89,7 +90,7 @@
                             margin-bottom: 1px;
                             background-color: #4C7EFF;
                             color: #fff;
-                            font-size: 17px;" value="選択した日付" readonly></td>
+                            font-size: 17px;" readonly></td>
                         </tr>
                         <tr>
                             <td><span>Time</span></td>
@@ -98,7 +99,7 @@
                             margin-bottom: 1px;
                             background-color: #4C7EFF;
                             color: #fff;
-                            font-size: 17px;" value="00:00" readonly></td>
+                            font-size: 17px;" readonly></td>
                         </tr>
                         <tr>
                             <td><span>Number</span></td>
@@ -107,11 +108,13 @@
                             margin-bottom: 1px;
                             background-color: #4C7EFF;
                             color: #fff;
-                            font-size: 17px;" value="１人" readonly></td>
+                            font-size: 17px;" readonly></td>
                         </tr>
                     </table>
                 </div>
-                <button>予約する</button>
+                <input type="hidden" class="input" name="user_id" value="{{ Auth::user()->id }}">
+                <input type="hidden" name="restaurant_id" value="{{ $item->id }}">
+                <button type="submit">予約する</button>
             </form>
         </div>
     </div>

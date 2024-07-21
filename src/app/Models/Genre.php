@@ -16,10 +16,4 @@ class Genre extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
-    public function scopePrefectureSearch($query, $genre_id){
-        if (!empty($genre_id)) {
-            $query->where('genre_id', $genre_id);
-        }
-    }
-
 }
