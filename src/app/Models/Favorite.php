@@ -21,4 +21,18 @@ class Favorite extends Model
 
         return $this->belongsTo(Restaurant::class);
     }
+
+    public function getFavorite($favorite_id){
+
+        // $query = DB::table('favorites');
+        // $query->join('restaurants', 'restaurants.id', '=', 'favorites.restaurant_id');
+        // $query->join('prefectures', 'prefectures.id', '=', 'restaurants.prefecture_id');
+        // $query->select('restaurants.*', 'genres.genre_name', 'prefectures.prefecture_name');
+        // $query->where('favorites.id', $favorite_id);
+        // $query->get();
+
+        // $favorite = $query;
+
+        // return $favorite;
+    }
 }
